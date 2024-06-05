@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 20px;
+}
+
+.navBar h3 {
+    
+}
+
+.navBar select {
+    border-radius: 10px;
+    padding: 10px;
+    background-position: right 100px center;
+}
+
+.chart {
+    margin: 20px;
+}
+
+.preferences {
+    display: flex;
+    margin: 20px;
+    padding: 10px 0px;
+}
+
+.pref-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 20px;
+    column-gap: 10px;
+}
+
+.pref-grid div {
+    width: calc(100% - 15px);
+    margin: 10px 0px;
+}
+
+.pref-grid div > input[type="text"] {
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.pref-grid div > input[type="color"] {
+    border: none;
+    border-radius: 20px;
+    padding: 2px 4px;
+    
+}
+
+.pref-grid div > input[type="color"]::-webkit-color-swatch {
+    border-radius: 20px;
+    padding: 2px;
+    background: lightblue;
+    border: none;
+}
+
+.pref-grid div > label {
+    padding: 10px 5px;
+}
+
+input::placeholder {
+    color: red;
+}
+
+.generate-chart {
+    position: fixed;
+    right: 10px;
+    margin: 20px 10px 0px 10px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px;
+}

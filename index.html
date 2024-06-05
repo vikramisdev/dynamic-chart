@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Charts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navBar">
+        <h3>Dynamic Charts</h3>
+        <select id="chartsType">
+            <option>Bar Chart</option>
+            <option>Pie Chart</option>
+            <option>Line Chart</option>
+            <option>Radar Chart</option>
+            <option>Doughnut Chart</option>
+            <option>Bubble Chart</option>
+            <option>Scatter Chart</option>
+            <option>Polar Area Chart</option>
+        </select>
+    </div>
+    
+     <div class="chart">
+        <canvas id="canvasChart"></canvas>
+    </div>
+    
+    <div>
+        <details class="preferences">
+            <summary>Change Preferences</summary>
+            <div class="pref-grid">
+                <div class="labels-div">
+                    <label for="labels">Enter Labels</label>
+                    <input class="labels" name="labels" type="text">
+                </div>
+                
+                <div class="label-div">
+                    <label for="label">Enter Chart Label</label>
+                    <input class="label" name="label" type="text">
+                </div>
+                
+                <div class="data-div">
+                    <label for="data">Enter Labels</label>
+                    <input class="data" name="data" type="text">
+                </div>
+                
+                <div class="background-color-div">
+                    <label for="background-color">Background Color</label>
+                    <input class="background-color" name="background-color" type="color">
+                </div>
+                
+                <div class="fill-div">
+                    <label for="fill">Fill</label>
+                    <input class="fill" name="fill" type="checkbox">
+                </div>
+                
+                <div class="border-color-div">
+                    <label for="border-color">Background Color</label>
+                    <input class="border-color" name="border-color" type="color">
+                </div>
+                
+                <div class="fill-div">
+                    <label for="fill">Responsive</label>
+                    <input class="fill" name="fill" type="checkbox">
+                </div>
+                
+            </div>
+            <div class="generate-chart-container">
+                <button onclick="generateChart()" class="generate-chart">Generate Chart</button>
+        
+            </div>
+        </details>
+    </div>
+    
+   
+     <script src="script.js"></script>   
+</body>
+</html>
