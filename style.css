@@ -29,57 +29,38 @@ body {
 }
 
 .preferences {
-    display: flex;
     margin: 20px;
-    padding: 10px 0px;
+    padding: 20px;
+    background: lightsteelblue;
+    border-radius: 20px;
 }
 
-.pref-grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin-top: 20px;
-    column-gap: 10px;
-}
-
-.pref-grid div {
-    width: calc(100% - 15px);
-    margin: 10px 0px;
-}
-
-.pref-grid div > input[type="text"] {
-    width: 100%;
-    padding: 10px 0px;
-    border-radius: 10px;
-    border: 1px solid black;
-}
-
-.pref-grid div > input[type="color"] {
+.preferences > input {
+    padding: 10px;
     border: none;
     border-radius: 20px;
-    padding: 2px 4px;
-    
+    width: calc(100% - 20px);
+    margin-top: 5px;
 }
 
-.pref-grid div > input[type="color"]::-webkit-color-swatch {
-    border-radius: 20px;
-    padding: 2px;
-    background: lightblue;
-    border: none;
-}
-
-.pref-grid div > label {
-    padding: 10px 5px;
-}
-
-input::placeholder {
-    color: red;
+.preferences > input:focus {
+    outline: 2px solid coral;
 }
 
 .generate-chart {
-    position: fixed;
-    right: 10px;
-    margin: 20px 10px 0px 10px;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 30px;
+    text-align: right;
+    margin: 30px 0px 0px 0px;
 }
+
+.generate-chart button {
+    padding: 15px 20px;
+    border: none; 
+    border-radius: 25px;
+}
+
+@media screen and (min-width: 1024px) {
+        body {
+            display: grid;
+            grid-template-columns: 60% 40%;
+        }
+    }

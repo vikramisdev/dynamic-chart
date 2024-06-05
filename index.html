@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navBar">
+    <div>
+        <div class="navBar">
         <h3>Dynamic Charts</h3>
         <select id="chartsType">
             <option>Bar Chart</option>
@@ -17,8 +18,6 @@
             <option>Line Chart</option>
             <option>Radar Chart</option>
             <option>Doughnut Chart</option>
-            <option>Bubble Chart</option>
-            <option>Scatter Chart</option>
             <option>Polar Area Chart</option>
         </select>
     </div>
@@ -26,52 +25,26 @@
      <div class="chart">
         <canvas id="canvasChart"></canvas>
     </div>
+    </div>
     
-    <div>
-        <details class="preferences">
-            <summary>Change Preferences</summary>
-            <div class="pref-grid">
-                <div class="labels-div">
-                    <label for="labels">Enter Labels</label>
-                    <input class="labels" name="labels" type="text">
-                </div>
-                
-                <div class="label-div">
-                    <label for="label">Enter Chart Label</label>
-                    <input class="label" name="label" type="text">
-                </div>
-                
-                <div class="data-div">
-                    <label for="data">Enter Labels</label>
-                    <input class="data" name="data" type="text">
-                </div>
-                
-                <div class="background-color-div">
-                    <label for="background-color">Background Color</label>
-                    <input class="background-color" name="background-color" type="color">
-                </div>
-                
-                <div class="fill-div">
-                    <label for="fill">Fill</label>
-                    <input class="fill" name="fill" type="checkbox">
-                </div>
-                
-                <div class="border-color-div">
-                    <label for="border-color">Background Color</label>
-                    <input class="border-color" name="border-color" type="color">
-                </div>
-                
-                <div class="fill-div">
-                    <label for="fill">Responsive</label>
-                    <input class="fill" name="fill" type="checkbox">
-                </div>
-                
-            </div>
-            <div class="generate-chart-container">
-                <button onclick="generateChart()" class="generate-chart">Generate Chart</button>
+    
+    <div class="preferences">
+        <label for="chart-title">Enter Chart Title</label><br>
+        <input class="title" name="chart-title" type="text">
         
-            </div>
-        </details>
+        <br><br>
+        
+        <label for="chart-labels">Enter Chart Labels</label><br>
+        <input class="labels" placeholder="Seperated by spaces" name="chart-labels" type="text">
+        
+        <br><br>
+        
+        <label for="chart-data">Enter Chart Values</label><br>
+        <input class="data" placeholder="Seperated by spaces" name="chart-data" type="text">
+        
+        <div class="generate-chart">
+            <button onclick="generateChart()">Generate Chart</button>
+        </div>
     </div>
     
    
